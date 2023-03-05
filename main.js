@@ -1,0 +1,6 @@
+function roll(id){
+if()
+
+
+
+}

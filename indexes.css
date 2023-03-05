@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(#4343b9,#d88dc1);
+    color:#fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+}
+section{
+    background: url(stars1.png);
+    height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+ul{
+    text-align:center;
+}
+ul:hover li a{
+    opacity:0;
+
+}
+ul li{
+    list-style: none;
+    margin: 14px 0px;
+}
+ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    background: #770956;
+    padding: 6px 30px;
+    border-radius:20px;
+    display: inline-block;
+    width:120px;
+    transition: 0.5s ;
+    position: relative;
+    z-index: 10;
+}
+ul li a:hover{
+    transform: scale(1.5); /*must  be with display*/
+    background: #8298d6;
+    opacity:1;
+}
+ul li:after{
+content:attr(data-text);
+position:absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50% , -50%);
+font-size:medium;
+font-weight: 400;
+text-transform: uppercase;
+opacity:0;
+letter-spacing: 50px;
+pointer-events: none;
+transition: 0.5s;
+}
+ ul li:hover:after{
+opacity:1;
+letter-spacing: 5px;
+ }
+ ul li::before{
+    content: '';
+    width: 80px;
+    height: 80px;
+    background:#fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% , 70%);
+    border-radius: 50%;
+    box-shadow: 0 10px 90px rgb(226, 61, 11);
+    opacity:0 ;
+ }
+ ul li:hover::before{
+    opacity:1;
+ }
